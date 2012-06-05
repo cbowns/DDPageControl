@@ -127,7 +127,6 @@
 	CGContextRestoreGState(context);
 }
 
-
 #pragma mark -
 #pragma mark Accessors
 
@@ -210,6 +209,7 @@
 	indicatorDiameter = aDiameter;
 
 	// correct the bounds accordingly
+	// todo this may not work in the new non-overridden setter world
 	self.bounds = self.bounds;
 
 	[self setNeedsDisplay];
@@ -220,12 +220,14 @@
 	indicatorSpace = aSpace;
 
 	// correct the bounds accordingly
+	// todo this may not work in the new non-overridden setter world
 	self.bounds = self.bounds;
 
 	[self setNeedsDisplay];
 }
 
-/*- (void)setFrame:(CGRect)aFrame
+/*
+- (void)setFrame:(CGRect)aFrame
 {
 	// we do not allow the caller to modify the size struct in the frame so we compute it
 	aFrame.size = [self sizeForNumberOfPages:numberOfPages];
@@ -237,8 +239,8 @@
 	// we do not allow the caller to modify the size struct in the bounds so we compute it
 	aBounds.size = [self sizeForNumberOfPages:numberOfPages];
 	super.bounds = aBounds;
-}*/
-
+}
+*/
 
 
 #pragma mark -
