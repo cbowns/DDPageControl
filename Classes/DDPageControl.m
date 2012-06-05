@@ -153,6 +153,7 @@
 	currentPage = MIN(MAX(0, currentPage), numberOfPages - 1);
 
 	// correct the bounds accordingly
+	// todo this may not work in the new non-overridden setter world
 	self.bounds = self.bounds;
 
 	// we need to redraw
