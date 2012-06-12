@@ -112,7 +112,9 @@
 			if (type == DDPageControlTypeOnEmptyOffEmpty || type == DDPageControlTypeOnFullOffEmpty)
 			{
 				CGContextSetStrokeColorWithColor(context, drawOffColor.CGColor);
-				CGContextStrokeEllipseInRect(context, dotRect);
+				CGContextSetLineWidth(context, 0.65f);
+				CGRect dotRectBig = CGRectInset(dotRect, -0.25f, -0.25f);
+				CGContextStrokeEllipseInRect(context, dotRectBig);
 			}
 			else
 			{
